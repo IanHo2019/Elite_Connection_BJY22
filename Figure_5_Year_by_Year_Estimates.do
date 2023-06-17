@@ -1,6 +1,6 @@
-* This do file replicates TABLE II in Bai, Jia & Yang (2022).
+* This do file replicates FIGURE V in Bai, Jia & Yang (2022).
 * Author: Ian He
-* Date: Jun 15, 2023
+* Date: Jun 17, 2023
 
 clear all
 
