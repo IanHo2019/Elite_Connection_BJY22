@@ -106,7 +106,7 @@ estout col* using "$tabdir\Table2_DID_Estimates.tex", ///
 		"& (1) & (2) & (3) & (4) & (5) & (6) & (7) & (8) & (9) & (10) \\ \hline") ///
 	prefoot("\hline" ///
 		"Year FE	& Y & Y & Y & Y & Y & Y & Y & Y & Y & Y \\ " ///
-		"Country FE	& Y & Y & Y & Y & Y & Y & Y & Y & Y & Y \\ " ///
+		"County FE	& Y & Y & Y & Y & Y & Y & Y & Y & Y & Y \\ " ///
 		"Geographic-Economic Controls	&   & Y & Y & Y &   & Y &   & Y &   & Y \\ " ///
 		"Political Controls	&   &   & Y & Y &   & Y &   & Y &   & Y \\ " ///
 		"War Controls	&   &   &   & Y &   & Y &   & Y &   & Y \\ ") ///
