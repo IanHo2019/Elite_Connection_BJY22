@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/IanHo2019/Web_of_Power_BJY23/blob/main/History.png" title="History" alt="History" width="660" height="110"/>
+  <img src="https://github.com/IanHo2019/Elite_Connection_BJY23/blob/main/History.png" title="History" alt="History" width="660" height="110"/>
 </p>
 
 ---
