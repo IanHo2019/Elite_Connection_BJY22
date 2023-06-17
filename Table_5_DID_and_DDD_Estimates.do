@@ -1,6 +1,6 @@
 * This do file replicates TABLE V in Bai, Jia & Yang (2022).
 * Author: Ian He
-* Date: Jun 16, 2023
+* Date: Jun 17, 2023
 
 * Goal: Estimate the impact of elite connections on number of national-level offices.
 * Data: A balanced panel with 1646 counties over China in 1800-1910.
@@ -24,7 +24,7 @@ use "$dtadir\NationalCntyYr.dta",clear
 keep if year>=1820
 
 
-* Gen interactions
+* Generate interactions
 gen nhXZenghu_all_invdist = nonhunan * Zenghu_all_invdist
 gen hXZenghu_all_invdist = hunan * Zenghu_all_invdist
 gen nhXZeng_all0_invdist = nonhunan * Zeng_all0_invdist
@@ -33,16 +33,6 @@ gen hXZeng_all0_invdist = hunan * Zeng_all0_invdist
 foreach x of varlist Zeng_all0_invdist hXZeng_all0_invdist hunan {
 	gen `x'Xperiod = `x' * period
 }
-
-
-
-/*
-foreach x of varlist hunan Zenghu_all_invdist Zeng_all0_invdist Zeng_all0_invdist_pc invdist0_L1 invdist0_F1 Zeng_exam0_invdist Zeng_Extraexam_invdist Zeng_BMF_invdist Zeng_juren0_invdist nhXZenghu_all_invdist nhXZeng_all0_invdist hXZenghu_all_invdist hXZeng_all0_invdist {
-	gen `x'Xperiod = `x' * period
-}
-*/
-
-
 
 foreach x of varlist lnurbanpop mainriv dist2canal lnwheat lnrice lncntypop lncntyarea prefcap lnjinshi lncntyquota0 Taiping_route1 dist_nanjing {
 	gen `x'Xperiod = `x' * period
