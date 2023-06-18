@@ -1,6 +1,6 @@
 * This do file replicates TABLE I in Bai, Jia & Yang (2022).
 * Author: Ian He
-* Date: Jun 13, 2023
+* Date: Jun 18, 2023
 
 clear all
 
@@ -265,28 +265,28 @@ sort ordernum
 drop ordernum
 
 * Construct a LaTeX tabular
-g tab = "\begin{tabular}{l*{6}{c}}" in 1
+g tab = "\adjustbox{max width=\textwidth}{\begin{tabular}{l*{6}{c}}" in 1
 g panel = "Sample & \multicolumn{3}{c}{Hunan counties 1850-1864} & \multicolumn{3}{c}{All counties, 1820-1910}" in 1
 g titlerow = "& Obs. & Mean & Std. dev. & Obs. & Mean & Std. dev." in 1
 g hline = "\hline" in 1
 g cline = "\cmidrule(lr){2-4}\cmidrule(lr){5-7}"
-g end = "\end{tabular}" in 1
+g end = "\end{tabular}}" in 1
 
-listtex tab if _n == 1 using "$tabdir/Table1.tex", replace
-listtex hline if _n == 1, appendto("$tabdir/Table1.tex")
-listtex hline if _n == 1, appendto("$tabdir/Table1.tex")
-listtex panel if _n==1, appendto("$tabdir/Table1.tex") rstyle(tabular)
-listtex cline if _n == 1, appendto("$tabdir/Table1.tex")
-listtex titlerow if _n==1, appendto("$tabdir/Table1.tex") rstyle(tabular)
-listtex hline if _n == 1, appendto("$tabdir/Table1.tex")
-listtex labels N1 m1 sd1 N2 m2 sd2 if _n<=17, appendto("$tabdir/Table1.tex") rstyle(tabular)
-listtex hline if _n == 1, appendto("$tabdir/Table1.tex")
-listtex hline if _n == 1, appendto("$tabdir/Table1.tex")
-listtex end if _n == 1, appendto("$tabdir/Table1.tex")
-
-
+listtex tab if _n == 1 using "$tabdir/Table1_Summary_Statistics.tex", replace
+listtex hline if _n == 1, appendto("$tabdir/Table1_Summary_Statistics.tex")
+listtex hline if _n == 1, appendto("$tabdir/Table1_Summary_Statistics.tex")
+listtex panel if _n==1, appendto("$tabdir/Table1_Summary_Statistics.tex") rstyle(tabular)
+listtex cline if _n == 1, appendto("$tabdir/Table1_Summary_Statistics.tex")
+listtex titlerow if _n==1, appendto("$tabdir/Table1_Summary_Statistics.tex") rstyle(tabular)
+listtex hline if _n == 1, appendto("$tabdir/Table1_Summary_Statistics.tex")
+listtex labels N1 m1 sd1 N2 m2 sd2 if _n<=17, appendto("$tabdir/Table1_Summary_Statistics.tex") rstyle(tabular)
+listtex hline if _n == 1, appendto("$tabdir/Table1_Summary_Statistics.tex")
+listtex hline if _n == 1, appendto("$tabdir/Table1_Summary_Statistics.tex")
+listtex end if _n == 1, appendto("$tabdir/Table1_Summary_Statistics.tex")
 
 
+
+/*
 ********************************************************************************
 *** Using "outreg2" ************************************************************
 ********************************************************************************
@@ -356,3 +356,4 @@ outreg2 using "$tabdir\Table1_Summary_Statistics.tex", ///
 	groupvar(martyr martyrs_tot Zeng_all0_invdist Zeng_all0_invdist_pc alloff lnarea lnpop lnrice lnwheat mainriv dist2canal lnurbanpop capital lnjinshi lnquotas dist_nanjing route1) ///
 	sum(log) eqkeep(N mean sd) cttop(All counties 1820-1910) ///
 	label dec(2) tex append
+*/
