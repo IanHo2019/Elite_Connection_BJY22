@@ -3,7 +3,7 @@
 * Date: Jun 17, 2023
 
 * Goal: Estimate the impact of elite connections on number of national-level offices.
-* Data: A balanced panel with 1646 counties over China in 1800-1910.
+* Data: A balanced panel with 1646 counties over China in 1820-1910.
 * Method: Static DID and DDD.
 ********************************************************************************
 
