@@ -278,3 +278,4 @@ outreg2 using "$tabdir\Table3_2_Surname.tex", append ///
 	keep(sur_invdis_zeng_all0_Post oth_sur_invdis_zeng_all0_Post) ///
 	label sdec(3) nocons nonotes ctitle(" ") ///
 	addtext(County FE, Y, Year FE, Y, County-level controls, -, Pref-year FE, -, Year-surname FE, Y, County-surname FE, Y, Year-county, Y)
+*/
