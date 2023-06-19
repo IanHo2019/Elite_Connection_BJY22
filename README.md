@@ -125,7 +125,7 @@ and
 $$N(Office_{c,t}) = \sum_{k=1821}^{1910} \rho_1^k Hunan_c \times EliteConnect_c \times 1\\{t=k\\}  + \sum_{k=1821}^{1910} \rho_2^k Hunan_c \times 1\\{t=k\\} + \sum_{k=1821}^{1910} \rho_3^k EliteConnect_c \times 1\\{t=k\\} + \alpha_c + \lambda_t + \sum_{\tau} \theta_{\tau} X_c \times 1\\{t \in \tau\\} + \epsilon_{c,t}$$
 where $\tau$ denotes a set consisting of three elements: period after 1853 (Zeng came to power), period between 1850 and 1864 (Taiping Rebellion), and period after 1864 ([a feast for crows](https://en.wikipedia.org/wiki/A_Feast_for_Crows) after the war). The regression results are presented below ([coding](./Figure_7_Dynamic_Impacts.do)).
 
-<img src="https://github.com/IanHo2019/Elite_Connection_BJY23/blob/main/Figures/Figure7_Dynamic_Impacts.svg" title="Figure 7: The Dynamic Impacts of Elite Network on National-Level Offices" alt="Figure 7: The Dynamic Impacts of Elite Network on National-Level Offices" width="1500" height="500"/>
+<img src="https://github.com/IanHo2019/Elite_Connection_BJY23/blob/main/Figures/Figure7_Dynamic_Impacts.svg" title="Figure 7: The Dynamic Impacts of Elite Network on National-Level Offices" alt="Figure 7: The Dynamic Impacts of Elite Network on National-Level Offices" width="1050" height="350"/>
 
 
 ### Relationship between Soldier Death and Power Distribution
@@ -161,5 +161,7 @@ Individuals, in special eras, nonnegligibly influence macro-level (political) ou
   * One more directly connected-to-Zeng elite in a Hunan county increases the number of soldier deaths by about 21%.
   * One direct elite connection in Hunan counties is associated with about 50% more national-level offices after Zeng came to power, compared with non-Hunan counties.
   * War contribution plays a key role in the effect of elite connections on power distribution.
+
+Click [here](./Replicating_BJY2022.pdf) to see all results presented in tables.
 
 My personal feeling: From Qin to Qing, Chinese history sees countless rebellions started by commoners; most of them failed, after sending tens of thousands of commoners to deaths. I never think those rebellion leaders must be righteous just because they fought against the cruel or incapable rulers; however, we may never ignore their (long-term) impacts on the country's development. This paper shows me a new way to consider Taiping Rebellion. The leader of Taiping Rebellion, [Hong Xiuquan (洪秀全)](https://en.wikipedia.org/wiki/Hong_Xiuquan), who titled himself as Heavenly King and claimed himself as the elder brother of Jesus Christ, didn't bring the love of God to China in the 19th century, but he indirectly reshaped the power structure of China. In many historical events in 20th-century China, we may still hear his (or his rebellion's) echoes.
