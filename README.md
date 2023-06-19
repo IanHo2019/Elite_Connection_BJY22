@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/IanHo2019/Elite_Connection_BJY23/blob/main/History.png" title="History" alt="History" width="660" height="110"/>
+  <img src="https://github.com/IanHo2019/Elite_Connection_BJY22/blob/main/History.png" title="History" alt="History" width="660" height="110"/>
 </p>
 
 ---
@@ -37,13 +37,13 @@ where $N_c$ is the number of elites from county $c$ and $d$ is the degree of sep
 
 The summary statistics of country-level connectedness measures and 12 country-level variables are replicated and presented in the table below. Click [here](./Table_1_Summary_Statistics.do) to see Stata codes. I tried to use `dtable` (a command introduced in Stata 18) or `outreg2` (an add-in command) but neither result was satisfying. Finally, I used `listtex` package, but the coding of using `outreg2` are also shared in my do file in case that you are interested.
 
-<img src="https://github.com/IanHo2019/Elite_Connection_BJY23/blob/main/Tables/Table1.png" title="Table 1: Summary Statistics" alt="Table 1: Summary Statistics" width="531" height="395.3"/>
+<img src="https://github.com/IanHo2019/Elite_Connection_BJY22/blob/main/Tables/Table1.png" title="Table 1: Summary Statistics" alt="Table 1: Summary Statistics" width="531" height="395.3"/>
 
 
 ## Effect on Soldier Death
 The number of soldier deaths in connected-to-Zeng counties increased highly after Zeng Guofan came to power, as presented in the following figure (see [here](./Figure_4_Soldier_Deaths.do) for coding). This is motivational evidence for this research.
 
-<img src="https://github.com/IanHo2019/Elite_Connection_BJY23/blob/main/Figures/Figure4_Soldier_Death.svg" title="Figure 4: Motivational Evidence on Elite Networks and Soldier Deaths" alt="Figure 4: Motivational Evidence on Elite Networks and Soldier Deaths" width="420" height="315"/>
+<img src="https://github.com/IanHo2019/Elite_Connection_BJY22/blob/main/Figures/Figure4_Soldier_Death.svg" title="Figure 4: Motivational Evidence on Elite Networks and Soldier Deaths" alt="Figure 4: Motivational Evidence on Elite Networks and Soldier Deaths" width="420" height="315"/>
 
 
 ### Empirical Strategy and Main Results
@@ -59,7 +59,7 @@ Note that in this context, there is **only one treatment time**: 1853, the year 
 
 The main results are reported in the following table. The estimated impacts of elite connections are significantly positive in all specifications.
 
-<img src="https://github.com/IanHo2019/Elite_Connection_BJY23/blob/main/Tables/Table2.png" title="Table 2: The Effect of Elite Connections on Soldier Deaths (DID Estimates)" alt="Table 2: The Effect of Elite Connections on Soldier Deaths (DID Estimates)" width="698.3" height="310"/>
+<img src="https://github.com/IanHo2019/Elite_Connection_BJY22/blob/main/Tables/Table2.png" title="Table 2: The Effect of Elite Connections on Soldier Deaths (DID Estimates)" alt="Table 2: The Effect of Elite Connections on Soldier Deaths (DID Estimates)" width="698.3" height="310"/>
 
 Click [here](./Table_2_DID_Estimates.do) to see Stata coding, where I run the DID specifications by the `reghdfe` command (`xtreg`, `areg`, and ` xtdidregress` can also work and return the same coefficient estimates; standard error estimates and R-squared are slightly different because of different degree-of-freedom adjustments). To successfully print out my table in LaTeX, you need to load the `adjustbox` package ([documentation](https://ctan.org/pkg/adjustbox)) in your preamble. You may find the table exported by `estout` doesn't look exactly like the printed one above, because I manually adjusted it for better presentation.
 
@@ -67,7 +67,7 @@ To check whether identification assumptions (especially parallel trends) hold, t
 $$\ln(SoldierDeath_{c,t}+1) = \sum_{k\in \\{1850, …, 1864\\}/\\{1853\\}} \beta^k EliteConnections_c \times 1\\{t=k\\} + \alpha_c + \lambda_t + \delta_{pt} + \theta X_c \times Post1853_t + \epsilon_{c,t}$$
 where $\delta_{pt}$ denotes prefecture-year fixed effects. Year 1853 is used as a base year. The results are shown in the following figure. We can see that pre-treatment coefficient estimates are not different from zero at 95% confidence level, regardless of the ways to measure county's elite connections. This gives us assurance that the Hunan counties didn't underwent different trends before Zeng came to power.
 
-<img src="https://github.com/IanHo2019/Elite_Connection_BJY23/blob/main/Figures/Figure5_Dynamic_Estimates.svg" title="Figure 5: The Effect of Elite Connections on Soldier Deaths (Year-by-Year Estimates)" alt="Table 2: The Effect of Elite Connections on Soldier Deaths (Year-by-Year Estimates)" width="600" height="429"/>
+<img src="https://github.com/IanHo2019/Elite_Connection_BJY22/blob/main/Figures/Figure5_Dynamic_Estimates.svg" title="Figure 5: The Effect of Elite Connections on Soldier Deaths (Year-by-Year Estimates)" alt="Table 2: The Effect of Elite Connections on Soldier Deaths (Year-by-Year Estimates)" width="600" height="429"/>
 
 
 ### Robustness Check
@@ -78,8 +78,8 @@ The results (reported in the two following tables) show that the impacts of elit
   * In Columns (5)-(7), the standard errors are multi-way clustered at county and surname levels (instead of at only country level as mis-described in the paper).
 
 <div id="Table3">
-  <img src="https://github.com/IanHo2019/Elite_Connection_BJY23/blob/main/Tables/Table3_1.png" title="Table 3: The Effect of Elite Connections on Soldier Deaths (Types of Links)" alt="Table 3: The Effect of Elite Connections on Soldier Deaths (Types of Links)" width="476.7" height="399"/>&nbsp;
-  <img src="https://github.com/IanHo2019/Elite_Connection_BJY23/blob/main/Tables/Table3_2.png" title="Table 3: The Effect of Elite Connections on Soldier Deaths (Types of Links)" alt="Table 3: The Effect of Elite Connections on Soldier Deaths (Types of Links)" width="463.7" height="341.4"/>
+  <img src="https://github.com/IanHo2019/Elite_Connection_BJY22/blob/main/Tables/Table3_1.png" title="Table 3: The Effect of Elite Connections on Soldier Deaths (Types of Links)" alt="Table 3: The Effect of Elite Connections on Soldier Deaths (Types of Links)" width="476.7" height="399"/>&nbsp;
+  <img src="https://github.com/IanHo2019/Elite_Connection_BJY22/blob/main/Tables/Table3_2.png" title="Table 3: The Effect of Elite Connections on Soldier Deaths (Types of Links)" alt="Table 3: The Effect of Elite Connections on Soldier Deaths (Types of Links)" width="463.7" height="341.4"/>
 </div>
 
 
@@ -93,8 +93,8 @@ Two placebo tests are done:
 The results are presented in the following tables. [Here](./Table_4_Placebo_Tests.do) is my coding. I use the `ivreghdfe` command (extended from `ivreg2` and `reghdfe`) to run the IV regressions. To use this command, four packages must be installed: `ftools`, `reghdfe`, `ivreg2`, and `ranktest`.
 
 <div id="Table4">
-  <img src="https://github.com/IanHo2019/Elite_Connection_BJY23/blob/main/Tables/Table4_1.png" title="Table 4: The Effect of Elite Connections on Soldier Deaths (Placebo Networks)" alt="Table 4: The Effect of Elite Connections on Soldier Deaths (Placebo Networks)" width="467.4" height="351.4"/>&nbsp;
-  <img src="https://github.com/IanHo2019/Elite_Connection_BJY23/blob/main/Tables/Table4_2.png" title="Table 4: The Effect of Elite Connections on Soldier Deaths (Placebo Networks)" alt="Table 4: The Effect of Elite Connections on Soldier Deaths (Placebo Networks)" width="431.1" height="350.3"/>
+  <img src="https://github.com/IanHo2019/Elite_Connection_BJY22/blob/main/Tables/Table4_1.png" title="Table 4: The Effect of Elite Connections on Soldier Deaths (Placebo Networks)" alt="Table 4: The Effect of Elite Connections on Soldier Deaths (Placebo Networks)" width="467.4" height="351.4"/>&nbsp;
+  <img src="https://github.com/IanHo2019/Elite_Connection_BJY22/blob/main/Tables/Table4_2.png" title="Table 4: The Effect of Elite Connections on Soldier Deaths (Placebo Networks)" alt="Table 4: The Effect of Elite Connections on Soldier Deaths (Placebo Networks)" width="431.1" height="350.3"/>
 </div>
 
 
@@ -103,7 +103,7 @@ The results are presented in the following tables. [Here](./Table_4_Placebo_Test
 
 The motivational evidence is presented in the figure below ([coding](./Figure_6_Number_of_Offices.do)), where the power distribution is proxied by the average number of national-level offices held by different groups (Hunan versus non-Hunan, connected versus unconnected). The two dashed blue lines denote the starting and ending years of Taiping Rebellion. Obviously, the average number of national-level offices held by officers from Hunan-connected counties increased largely during and after the war.
 
-<img src="https://github.com/IanHo2019/Elite_Connection_BJY23/blob/main/Figures/Figure6_Number_of_Offices.svg" title="Figure 6: Motivational Evidence for the Power Effect" alt="Figure 6: Motivational Evidence for the Power Effect" width="600" height="360"/>
+<img src="https://github.com/IanHo2019/Elite_Connection_BJY22/blob/main/Figures/Figure6_Number_of_Offices.svg" title="Figure 6: Motivational Evidence for the Power Effect" alt="Figure 6: Motivational Evidence for the Power Effect" width="600" height="360"/>
 
 
 ### Empirical Strategy and Main Results
@@ -117,7 +117,7 @@ where
 
 The main results are presented in the following table ([coding](./Table_5_DID_and_DDD_Estimates.do)). All standard errors are clustered at the prefecture level. Both DID and DDD show us a significant positive effect.
 
-<img src="https://github.com/IanHo2019/Elite_Connection_BJY23/blob/main/Tables/Table5.png" title="Table 5: The Effect of Elite Connections on Elite Power (DID and DDD Estimates)" alt="Table 5: The Effect of Elite Connections on Elite Power (DID and DDD Estimates)" width="593.7" height="343.1"/>
+<img src="https://github.com/IanHo2019/Elite_Connection_BJY22/blob/main/Tables/Table5.png" title="Table 5: The Effect of Elite Connections on Elite Power (DID and DDD Estimates)" alt="Table 5: The Effect of Elite Connections on Elite Power (DID and DDD Estimates)" width="593.7" height="343.1"/>
 
 The authors also run a dynamic DID regression and a dynamic DDD regression to see the dynamic effects on the number of national-level offices. The regressions are
 $$N(Office_{c,t}) = \sum_{k=1821}^{1910} \beta_1^k Hunan_c \times EliteConnect_c \times 1\\{t=k\\}  + \sum_{k=1821}^{1910} \beta_2^k (1-Hunan_c) \times EliteConnect_c \times 1\\{t=k\\} + \sum_{k=1821}^{1910} \rho^k Hunan_c \times 1\\{t=k\\} + \alpha_c + \lambda_t + \sum_{\tau} \theta_{\tau} X_c \times 1\\{t \in \tau\\} + \epsilon_{c,t}$$
@@ -125,7 +125,7 @@ and
 $$N(Office_{c,t}) = \sum_{k=1821}^{1910} \rho_1^k Hunan_c \times EliteConnect_c \times 1\\{t=k\\}  + \sum_{k=1821}^{1910} \rho_2^k Hunan_c \times 1\\{t=k\\} + \sum_{k=1821}^{1910} \rho_3^k EliteConnect_c \times 1\\{t=k\\} + \alpha_c + \lambda_t + \sum_{\tau} \theta_{\tau} X_c \times 1\\{t \in \tau\\} + \epsilon_{c,t}$$
 where $\tau$ denotes a set consisting of three elements: period after 1853 (Zeng came to power), period between 1850 and 1864 (Taiping Rebellion), and period after 1864 ([a feast for crows](https://en.wikipedia.org/wiki/A_Feast_for_Crows) after the war). The regression results are presented below ([coding](./Figure_7_Dynamic_Impacts.do)).
 
-<img src="https://github.com/IanHo2019/Elite_Connection_BJY23/blob/main/Figures/Figure7_Dynamic_Impacts.svg" title="Figure 7: The Dynamic Impacts of Elite Network on National-Level Offices" alt="Figure 7: The Dynamic Impacts of Elite Network on National-Level Offices" width="1050" height="350"/>
+<img src="https://github.com/IanHo2019/Elite_Connection_BJY22/blob/main/Figures/Figure7_Dynamic_Impacts.svg" title="Figure 7: The Dynamic Impacts of Elite Network on National-Level Offices" alt="Figure 7: The Dynamic Impacts of Elite Network on National-Level Offices" width="1050" height="350"/>
 
 
 ### Relationship between Soldier Death and Power Distribution
@@ -135,7 +135,7 @@ To find this relationship, [Bai et al. (2022)](https://doi.org/10.1093/qje/qjac0
 
 The results are reported in the following table, where Column (1) is the same as Column (6) in Table 5. Clearly, power effects can be explained by soldier deaths. In other words, chaos (or war) is a ladder.
 
-<img src="https://github.com/IanHo2019/Elite_Connection_BJY23/blob/main/Tables/Table6.png" title="Table 6: The Power Effect (The Role of Soldier Deaths)" alt="Table 6: The Power Effect (The Role of Soldier Deaths)" width="634" height="608"/>
+<img src="https://github.com/IanHo2019/Elite_Connection_BJY22/blob/main/Tables/Table6.png" title="Table 6: The Power Effect (The Role of Soldier Deaths)" alt="Table 6: The Power Effect (The Role of Soldier Deaths)" width="634" height="608"/>
 
 My coding is [here](./Table_6_Chaos_Is_a_Ladder.do). As before, the `ivreghdfe` command is employed to run the IV regressions. This multi-functional command always returns a long list showing bunches of estimates and statistics. We can type `ereturn list` to see all results. The table above reports the first-stage Cragg-Donald Wald *F* statistic and the *p*-value in overidentification test, which are stored in the scalars `e(cdf)` and `e(jp)` respectively.
 
@@ -143,17 +143,17 @@ My coding is [here](./Table_6_Chaos_Is_a_Ladder.do). As before, the `ivreghdfe` 
 ### Additional Results
 To see the implementation of elite connections on power distribution at the national level, [Bai et al. (2022)](https://doi.org/10.1093/qje/qjac041) use the shares of [Jinshi](https://en.wikipedia.org/wiki/Jinshi) (进士, the highest and final degree in the imperial examination) across provinces as benchmarks, and then use the deviation of true shares from the benchmarks as a proxy for power localization. This methodology comes from Ellison-Glaeser index in [Ellison & Glaeser (1997)](https://doi.org/10.1086/262098). The results are shown in the following figure ([coding](./Figure_8_Power_Distribution.do)), where the vertical dashed line indicates the year 1853. We can see that the difference between the true EG index and the counterfactual one increased a lot after the war.
 
-<img src="https://github.com/IanHo2019/Elite_Connection_BJY23/blob/main/Figures/Figure8_Power_Distribution.svg" title="Figure 8: National-Level Power Distribution and the Contribution of Elite Networks" alt="Figure 8: National-Level Power Distribution and the Contribution of Elite Networks" width="800" height="400"/>
+<img src="https://github.com/IanHo2019/Elite_Connection_BJY22/blob/main/Figures/Figure8_Power_Distribution.svg" title="Figure 8: National-Level Power Distribution and the Contribution of Elite Networks" alt="Figure 8: National-Level Power Distribution and the Contribution of Elite Networks" width="800" height="400"/>
 
 Next, the authors focus on the origins of the top four provincial officials, i.e., one governor (巡抚) and three vice-governors. Note that Qing Dynasty required that officials born in a province never govern the province. Assuming a simple randomization (probability of individuals from a county holding top official positions is proportional to the county's population), the authors compare the shares of top officials from Hunan connected-to-Zeng counties across three periods: pre-war, in-war, and post-war. They find that during the war, shares of top officials from Hunan rose largely, especially in those provinces most affected by the war (e.g., Guangxi, Zhejiang, and Hubei). See the following figure (comparing 17 non-Hunan provinces between periods) for an illustration.
 
-<img src="https://github.com/IanHo2019/Elite_Connection_BJY23/blob/main/Figures/Figure9_1_Share_of_Top_Officials.svg" title="Figure 9: The Share of Provincial Officials from Connected Counties in Hunan" alt="Figure 9: The Share of Provincial Officials from Connected Counties in Hunan" width="840" height="350"/>
+<img src="https://github.com/IanHo2019/Elite_Connection_BJY22/blob/main/Figures/Figure9_1_Share_of_Top_Officials.svg" title="Figure 9: The Share of Provincial Officials from Connected Counties in Hunan" alt="Figure 9: The Share of Provincial Officials from Connected Counties in Hunan" width="840" height="350"/>
 
 Finally, the authors briefly investigate the "political legacy" of the elite connections. This research direction comes from some historians; for example, [Michael (1949)](https://doi.org/10.2307/3635664) state that the rise of regional elites "marked the beginning of the disintegration of dynastic power that finally led to the collapse of the dynasty and to the system of warlordism that replaced [it]." To verify this argument, [Bai et al. (2022)](https://doi.org/10.1093/qje/qjac041) focus on a famous event: [Mutual Defense Pact of the Southeastern Provinces (东南互保)](https://en.wikipedia.org/wiki/Mutual_Defense_Pact_of_the_Southeastern_Provinces). In the summer of 1900, [Empress Dowager Cixi](https://en.wikipedia.org/wiki/Empress_Dowager_Cixi), who had full administrative power over Qing, issued (on behalf of Guangxu Emperor) the imperial decree of declaration of war against 11 foreign nations.[^1] To central state's surprise, five provincial governors formally rejected to carry out the imperial decree; instead, they took a neutral position for preserving peace in their own provinces. [Bai et al. (2022)](https://doi.org/10.1093/qje/qjac041) use data to show that the share of top officials from Hunan-connected counties during the war is positively related to the probability of the corresponding province's disobeying the imperial decree. Their figure has been replicated below ([coding](./Figure_9_Top_Officials.do)). This could be (weak) evidence that regional elites became more autonomous after Taiping Rebellion. From my perspective, this finding is not surprising; after all, among the five governors, one was student of Zeng Guofan [[Li Hongzhang (李鸿章)](https://en.wikipedia.org/wiki/Li_Hongzhang)] and one had ever joined Hunan army [[Liu Kunyi (刘坤一)]( https://en.wikipedia.org/wiki/Liu_Kunyi)].
 
 [^1]: In 2019, my Mexican friend Sofia asked me a question after her Asian History lecture: "Was Empress Dowager Cixi the most powerful woman in Chinese history?" I replied: "I don't think so. [Lady Wu](https://en.wikipedia.org/wiki/Wu_Zetian) might be more powerful. But Cixi must be bravest woman in Chinese history, or maybe in world history."
 
-<img src="https://github.com/IanHo2019/Elite_Connection_BJY23/blob/main/Figures/Figure9_2_Prob_Disobey.svg" title="Figure 9: The Share of Provincial Officials from Connected Counties in Hunan" alt="Figure 9: The Share of Provincial Officials from Connected Counties in Hunan" width="343" height="343"/>
+<img src="https://github.com/IanHo2019/Elite_Connection_BJY22/blob/main/Figures/Figure9_2_Prob_Disobey.svg" title="Figure 9: The Share of Provincial Officials from Connected Counties in Hunan" alt="Figure 9: The Share of Provincial Officials from Connected Counties in Hunan" width="343" height="343"/>
 
 
 ## Summary of Research Findings
