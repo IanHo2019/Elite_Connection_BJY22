@@ -1,0 +1,32 @@
+\adjustbox{max width=\textwidth}{
+\begin{tabular}{l*{6}{c}}
+\hline \hline
+Dependent variable & \multicolumn{6}{c}{National-level offices (mean: 0.093)} \\ \cline{2-7}
+Methods & \multicolumn{3}{c}{OLS} & \multicolumn{3}{c}{IV} \\ \cmidrule(r){2-4}\cmidrule(l){5-7}
+& (1) & (2) & (3) & (4) & (5) & (6) \\ \hline
+Baseline connections $ \times $ Hunan $ \times $ 1854-1910&       0.049***&               &      -0.011   &               &               &               \\
+                    &     (0.013)   &               &     (0.015)   &               &               &               \\
+$ \text{Soldier Deaths}_{1854-64} \times $ 1854-1910&               &       0.421***&       0.427***&       0.383***&       0.387***&       0.368***\\
+                    &               &     (0.091)   &     (0.097)   &     (0.077)   &     (0.093)   &     (0.044)   \\
+Natl-level exam connections $ \times $ Hunan $ \times $ 1854-1910&               &               &               &               &       0.018   &               \\
+                    &               &               &               &               &     (0.076)   &               \\
+Other connections $ \times $ Hunan $ \times $ 1854-1910&               &               &               &               &               &       0.008   \\
+                    &               &               &               &               &               &     (0.035)   \\
+Baseline connections $ \times $ 1854-1910&       0.011   &       0.010   &       0.011   &               &               &               \\
+                    &     (0.011)   &     (0.011)   &     (0.011)   &               &               &               \\
+Natl-level exam connections $ \times $ 1854-1910&               &               &               &       0.006   &       0.007   &       0.007   \\
+                    &               &               &               &     (0.020)   &     (0.022)   &     (0.022)   \\
+Other connections $ \times $ 1854-1910&               &               &               &       0.022   &       0.019   &       0.019   \\
+                    &               &               &               &     (0.030)   &     (0.040)   &     (0.040)   \\
+Hunan $ \times $ 1854-1910&       0.082   &      -0.018   &      -0.008   &      -0.020   &      -0.024   &      -0.022   \\
+                    &     (0.063)   &     (0.029)   &     (0.032)   &     (0.040)   &     (0.038)   &     (0.037)   \\
+\hline
+County FE      & Y & Y & Y & Y & Y & Y \\ 
+Year FE        & Y & Y & Y & Y & Y & Y \\ 
+Controls $ \times $ 1854-1910  & Y & Y &  & Y & Y & Y \\ 
+Observations        &     149,786   &     149,786   &     149,786   &     149,786   &     149,786   &     149,786   \\
+R-Squared           &       0.384   &       0.392   &       0.392   &       0.019   &       0.019   &       0.019   \\
+First-stage F-test  &               &               &               &     55750.5   &    104969.5   &     63510.2   \\
+Overidentification test p-value&               &               &               &        0.81   &               &               \\
+\hline\hline
+\end{tabular}}

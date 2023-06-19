@@ -1,0 +1,20 @@
+\adjustbox{max width=\textwidth}{
+\begin{tabular}{l*{6}{c}}
+\hline \hline
+Specification & \multicolumn{4}{c}{DID} & \multicolumn{2}{c}{DDD} \\ \cmidrule(r){2-5}\cmidrule(l){6-7}
+Sample & \multicolumn{2}{c}{Hunan} & \multicolumn{2}{c}{Non-Hunan} & \multicolumn{2}{c}{All} \\ \cmidrule(r){2-3}\cmidrule(lr){4-5}\cmidrule(l){6-7}
+& (1) & (2) & (3) & (4) & (5) & (6) \\ \hline
+Baseline connections $ \times $ 1854-1910&       0.053***&       0.054***&       0.009   &       0.011   &       0.009   &       0.011   \\
+                    &     (0.005)   &     (0.005)   &     (0.012)   &     (0.011)   &     (0.012)   &     (0.011)   \\
+Baseline Connections $ \times $ Hunan $ \times $ 1854-1910&               &               &               &               &       0.044***&       0.049***\\
+                    &               &               &               &               &     (0.012)   &     (0.013)   \\
+Hunan $ \times $ 1854-1910&               &               &               &               &       0.094   &       0.082   \\
+                    &               &               &               &               &     (0.058)   &     (0.063)   \\
+\hline
+County FE      & Y & Y & Y & Y & Y & Y \\ 
+Year FE        & Y & Y & Y & Y & Y & Y \\ 
+Controls $ \times $ 1854-1910  &  & Y &  & Y &  & Y \\ 
+Observations        &       6,825   &       6,825   &     142,961   &     142,961   &     149,786   &     149,786   \\
+R-Squared           &       0.338   &       0.357   &       0.388   &       0.388   &       0.383   &       0.384   \\
+\hline\hline
+\end{tabular}}
