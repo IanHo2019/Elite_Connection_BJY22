@@ -41,9 +41,9 @@ scatter ratio6599 ratio5464 if provinceid!=6, ///
 	mlabel(prov_en) mlabsize(vsmall) mlabcolor(black) mlabposition(1) ///
 	xlabel(0(0.1)0.3, labsize(small)) ///
 	ylabel(0(0.1)0.3, angle(90) labsize(small)) ///
-	title("B. 1854-64 (In-war) vs 1854-99 (Post-war)") ///
+	title("B. 1854-64 (In-war) vs 1865-99 (Post-war)") ///
 	xtitle("From Hunan*connected counties, 1854-64", size(medium)) ///
-	ytitle("From Hunan*connected counties, 1854-99", size(medium)) ///
+	ytitle("From Hunan*connected counties, 1865-99", size(medium)) ///
 	plotregion(fcolor(white) lcolor(white)) ///
 	graphregion(fcolor(white) lcolor(white)) ///
 	name(in_post, replace)
